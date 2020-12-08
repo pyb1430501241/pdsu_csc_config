@@ -4,7 +4,6 @@ server:
     context-path: /
 spring:
   application:
-    # 本名称并无实际意义, 因为本服务不注册进 Eureka
     name: CodeSharingCommumity_客户端
 eureka:
   client:
@@ -12,7 +11,7 @@ eureka:
       # Eureka 管理, 如为集群模式, 则应注册到所有 eureka
       defaultZone: http://localhost:7001/eureka/
       # 不注册自己进 Eureka
-    register-with-eureka: false
+    register-with-eureka: true
   instance:
     # 自己的唯一名称
     instance-id: CodeSharingCommumity_客户端
@@ -37,4 +36,4 @@ logging:
 csc:
   cors:
     # 该配置代表本服务允许访问的域名
-    allow-ip: http://112.124.30.43:8080
+    allow-ip: http://112.124.30.43:8080, localhost:8081, localhost:80
