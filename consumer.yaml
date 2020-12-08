@@ -4,7 +4,8 @@ server:
     context-path: /
 spring:
   application:
-    name: CodeSharingCommumity_客户端
+    # 自己在 eureka 里的唯一标识
+    name: CodeSharingCommumityConsumer
 eureka:
   client:
     service-url:
