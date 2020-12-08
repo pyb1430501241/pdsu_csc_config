@@ -33,5 +33,5 @@ logging:
 csc:
   cors:
     # 该配置代表本服务允许访问的域名
-    allow-ip: all
+    allow-ip: http://112.124.30.43:8080
 ---
