@@ -11,7 +11,7 @@ spring:
     name: CodeSharingCommunityProvider
   datasource:
     username: root
-    password: pyb***20000112
+    password: Hj20000407
     url: jdbc:mysql://localhost:3306/pdsu_csc?useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
