@@ -11,7 +11,7 @@ eureka:
     service-url:
       # Eureka 管理, 如为集群模式, 则应注册到所有 eureka
       defaultZone: http://localhost:7001/eureka/
-      # 不注册自己进 Eureka
+      # 注册自己进 Eureka
     register-with-eureka: true
   instance:
     # 自己的唯一名称
@@ -28,6 +28,7 @@ hystrix:
       execution:
         #设置超时时间
         isolation:
+          strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 60000
         semaphore:
