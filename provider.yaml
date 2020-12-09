@@ -53,5 +53,5 @@ logging:
 csc:
   cors:
     # 该配置代表本服务允许访问的域名
-    allow-ip: localhost:80, 121.199.27.93:80, 129.204.206.237:80
+    allow-ip: localhost, localhost:7001/
 ---
