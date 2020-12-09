@@ -2,6 +2,7 @@ server:
   port: 80
   servlet:
     context-path: /
+  max-http-header-size: 128KB
 spring:
   application:
     # 自己在 eureka 里的唯一标识
