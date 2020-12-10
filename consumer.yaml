@@ -29,7 +29,6 @@ hystrix:
       execution:
         #设置超时时间
         isolation:
-          strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 60000
         semaphore:
