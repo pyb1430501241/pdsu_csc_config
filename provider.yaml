@@ -4,8 +4,8 @@ server:
   servlet:
     context-path: /
   max-http-header-size: 128KB
+
 spring:
-  profiles: dev
   application:
     # 同一微服务里所有的提供者必须同名, 所对应的微服务名称为此值全大写
     name: CodeSharingCommunityProvider
@@ -30,6 +30,12 @@ mybatis:
     map-underscore-to-camel-case: true
     cache-enabled: true
 
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
 eureka:
   client:
     service-url:
@@ -53,5 +59,4 @@ logging:
 csc:
   cors:
     # 该配置代表本服务允许访问的域名
-    allow-ip: localhost, localhost:7001/
----
+    allow-ip: localhost
