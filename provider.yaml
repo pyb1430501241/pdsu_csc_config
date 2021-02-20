@@ -6,9 +6,8 @@ server:
   max-http-header-size: 128KB
 
 spring:
-  profiles: dev
   application:
-    # 同一微服务里所有的提供者必须同名, 所对应的微服务名称为此值全大写
+    # 同一微服务里所有的同类提供者必须同名, 所对应的微服务名称为此值全大写
     name: CodeSharingCommunityProvider
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
@@ -22,9 +21,18 @@ spring:
       connection-timeout: 30000
       connection-test-query: SELECT 1
       username: root
-      password: Hj20000407
+      password: pyb***20000112
       jdbc-url: jdbc:mysql://localhost:3306/pdsu_csc?useSSL=false&serverTimezone=UTC
       driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: localhost
+    password: pyb***20000112
+    port: 6379
+    jedis:
+      pool:
+        max-active: 60
+        max-wait: 60
+        max-idle: 10
 
 mybatis:
   mapper-locations:
@@ -59,9 +67,4 @@ info:
 
 logging:
   config: classpath:log4j2/log4j2.xml
-
-csc:
-  cors:
-    # 该配置代表本服务允许访问的域名
-    allow-ip: localhost
 ---
