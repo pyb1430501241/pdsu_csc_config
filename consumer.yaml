@@ -8,6 +8,15 @@ spring:
   application:
     # 自己在 eureka 里的唯一标识
     name: CodeSharingCommunityConsumer
+  redis:
+    host: localhost
+    password: pyb***20000112
+    port: 6379
+    jedis:
+      pool:
+        max-active: 60
+        max-wait: 60
+        max-idle: 10
 eureka:
   client:
     service-url:
@@ -36,9 +45,4 @@ hystrix:
           maxConcurrentRequests: 20
 logging:
   config: classpath:log4j2.xml
-csc:
-  cors:
-    # 该配置代表本服务允许访问的域名, 如想设置为允许所有域名访问,
-    # 则无法保证用户持续登录认证问题
-    allow-ip: http://112.124.30.43:8080/
 ---
