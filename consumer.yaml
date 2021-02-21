@@ -29,6 +29,10 @@ eureka:
     instance-id: CodeSharingCommunity_客户端
     prefer-ip-address: true
 feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
   hystrix:
     # 开启 hystrix 降级机制
     # 降级即为服务端宕机时, 一个备用的响应返回
